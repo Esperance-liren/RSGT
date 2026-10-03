@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use RSGT, please cite the associated paper and the upstream Superpoint Transformer work."
+title: "RSGT: Reliability-aware Superpoint Graph Learning"
+type: software
+authors:
+  - family-names: Zhang
+    given-names: Songyu
+  - family-names: Gai
+    given-names: Shaoyan
+  - family-names: Da
+    given-names: Feipeng
+version: "1.0.0"
+license: MIT
+repository-code: "https://github.com/Esperance-liren/RSGT"
+url: "https://github.com/Esperance-liren/RSGT"
+preferred-citation:
+  type: article
+  title: "Reliability-aware Superpoint Graph Learning for Large-scale Point Cloud Semantic Segmentation: Evaluation on Indoor, Mobile, and Airborne Benchmarks"
+  authors:
+    - family-names: Zhang
+      given-names: Songyu
+    - family-names: Gai
+      given-names: Shaoyan
+    - family-names: Da
+      given-names: Feipeng
+  journal: "ISPRS Journal of Photogrammetry and Remote Sensing"

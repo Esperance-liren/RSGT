@@ -1,0 +1,22 @@
+# @package _global_
+# python src/train.py experiment=semantic/rsgt_kitti360
+
+defaults:
+  - override /datamodule: semantic/kitti360.yaml
+  - override /model: semantic/rsgt.yaml
+  - override /trainer: gpu.yaml
+
+trainer:
+  max_epochs: 250
+
+model:
+  optimizer:
+    lr: 0.01
+    weight_decay: 1e-4
+
+  _down_dim: [128, 128, 128, 128]
+  _up_dim: [128, 128, 128]
+
+  net:
+    no_ffn: false
+    down_ffn_ratio: 1

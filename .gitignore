@@ -1,0 +1,52 @@
+# Python/cache artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.nbc
+*.nbi
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments
+.env
+.venv/
+venv/
+env/
+
+# Training/evaluation outputs
+/logs/
+/outputs/
+/wandb/
+/lightning_logs/
+*.ckpt
+*.pth
+*.pt
+*.npz
+
+# Datasets / large local data
+/data/
+/datasets/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporary / backup
+*.bak
+*.bak_*
+*.tmp
+*~
+
+# Local Hydra overrides
+configs/local/
+
+# Locally built / cloned optional dependencies
+src/dependencies/FRNN/
+src/dependencies/torchsparse/
+build/
+dist/
+*.egg-info/

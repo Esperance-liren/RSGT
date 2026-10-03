@@ -1,0 +1,15 @@
+# @package _global_
+# python src/train.py experiment=semantic/rsgt_s3dis
+
+defaults:
+  - override /datamodule: semantic/s3dis.yaml
+  - override /model: semantic/rsgt.yaml
+  - override /trainer: gpu.yaml
+
+trainer:
+  max_epochs: 2000
+
+model:
+  optimizer:
+    lr: 0.1
+    weight_decay: 1e-2

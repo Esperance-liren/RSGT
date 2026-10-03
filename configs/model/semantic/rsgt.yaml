@@ -1,0 +1,28 @@
+# @package model
+# RSGT: SPT backbone with reliability-aware attention and local pocket refinement.
+
+defaults:
+  - /model/semantic/spt-2.yaml
+
+# Refined prediction loss with auxiliary coarse supervision.
+loss_type: 'ce'
+multi_stage_loss_lambdas: null
+
+# Decoder-side local pocket refinement
+rsgt_pocket: true
+pocket_edge_dim: ${datamodule.num_hf_edge}
+pocket_hidden_dim: 32
+tau_u: 0.6
+tau_d: 0.6
+lambda_p: 1.0
+lambda_aux: 0.4
+pocket_eps: 1e-6
+
+net:
+  # Reliability-aware edge modulation
+  edge_gate: true
+  edge_gate_hidden_dim: 32
+  edge_gate_per_head: true
+  edge_gate_scale: 1.0
+  edge_gate_drop: 0.10
+  edge_gate_detach_attr: false
